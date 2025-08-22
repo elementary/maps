@@ -8,66 +8,69 @@ msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-16 11:38+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-08-22 15:58+0000\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Chinese (Traditional Han script) <https://"
+"l10n.elementaryos.org/projects/maps/maps/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: src/MainWindow.vala:35
 msgid "Maps"
-msgstr ""
+msgstr "地圖"
 
 #: src/MainWindow.vala:41
 msgid "Move to the current location"
-msgstr ""
+msgstr "移動到目前位置"
 
 #: src/MainWindow.vala:49
 msgid "Search Maps"
-msgstr ""
+msgstr "搜尋地圖"
 
 #: src/MainWindow.vala:57
 msgid "No Results Found"
-msgstr ""
+msgstr "找不到結果"
 
 #: src/MainWindow.vala:58
 msgid "Try a different search"
-msgstr ""
+msgstr "請嘗試別的關鍵字"
 
 #: src/MainWindow.vala:104
 msgid "Explore"
-msgstr ""
+msgstr "探索"
 
 #: src/MainWindow.vala:123
 msgid "Transit"
-msgstr ""
+msgstr "交通工具"
 
 #: src/MainWindow.vala:143
 msgid "System"
-msgstr ""
+msgstr "系統"
 
 #: src/MainWindow.vala:144
 msgid "Light"
-msgstr ""
+msgstr "亮色"
 
 #: src/MainWindow.vala:145
 msgid "Dark"
-msgstr ""
+msgstr "深色"
 
 #: src/MainWindow.vala:149
 msgid "Style"
-msgstr ""
+msgstr "風格"
 
 #: src/MainWindow.vala:155
 msgid "Main Menu"
-msgstr ""
+msgstr "主選單"
 
 #: src/MainWindow.vala:190
 msgid "Failed to connect to location service"
-msgstr ""
+msgstr "連接位置服務失敗"
 
 #: src/SearchResultItem.vala:28
 msgid "Unknown"
-msgstr ""
+msgstr "未知"
