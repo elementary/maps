@@ -11,75 +11,67 @@ msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-16 11:38+0000\n"
-"PO-Revision-Date: 2024-05-03 10:45+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/atlas/nl/>\n"
+"PO-Revision-Date: 2025-09-03 19:55+0000\n"
+"Last-Translator: DutchVipperloid <svenroelof@e.email>\n"
+"Language-Team: Dutch <https://l10n.elementaryos.org/projects/maps/maps/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.3\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: src/MainWindow.vala:35
 msgid "Maps"
-msgstr ""
+msgstr "Kaarten"
 
 #: src/MainWindow.vala:41
 msgid "Move to the current location"
 msgstr "Verplaatsen naar huidige locatie"
 
 #: src/MainWindow.vala:49
-#, fuzzy
-#| msgid "Search Location"
 msgid "Search Maps"
-msgstr "Locatie zoeken"
+msgstr "Zoek in kaarten"
 
 #: src/MainWindow.vala:57
-#, fuzzy
 msgid "No Results Found"
-msgstr "Er zijn geen zoekresultaten"
+msgstr "Geen zoekresultaten gevonden"
 
 #: src/MainWindow.vala:58
 msgid "Try a different search"
-msgstr ""
+msgstr "Probeer een andere zoekopdracht"
 
 #: src/MainWindow.vala:104
 msgid "Explore"
-msgstr ""
+msgstr "Ontdek"
 
 #: src/MainWindow.vala:123
-#, fuzzy
 msgid "Transit"
-msgstr "OV-kaart"
+msgstr "Openbaar vervoer"
 
 #: src/MainWindow.vala:143
-#, fuzzy
 msgid "System"
 msgstr "Systeem"
 
 #: src/MainWindow.vala:144
-#, fuzzy
 msgid "Light"
 msgstr "Licht"
 
 #: src/MainWindow.vala:145
-#, fuzzy
 msgid "Dark"
 msgstr "Donker"
 
 #: src/MainWindow.vala:149
-#, fuzzy
 msgid "Style"
-msgstr "Thema:"
+msgstr "Stijl"
 
 #: src/MainWindow.vala:155
 msgid "Main Menu"
-msgstr ""
+msgstr "Hoofdmenu"
 
 #: src/MainWindow.vala:190
 msgid "Failed to connect to location service"
-msgstr ""
+msgstr "Kon niet verbinden met de locatieservice"
 
 #: src/SearchResultItem.vala:28
 msgid "Unknown"
