@@ -12,3 +12,5 @@ Exec=io.elementary.maps
 SingleMainWindow=true
 StartupNotify=true
 Terminal=false
+
+MimeType=x-scheme-handler/geo;

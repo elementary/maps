@@ -239,7 +239,7 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
 
         search_listview.activate.connect ((pos) => {
             var place = (Geocode.Place) selection_model.get_item (pos);
-            map_widget.go_to_place (place);
+            map_widget.go_to_location (place.location);
             search_res_popover.popdown ();
         });
 
@@ -253,6 +253,16 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
         search_res_popover.unparent ();
         map_widget.save_map_state ();
         destroy ();
+    }
+
+    public void go_to_uri (string uri) {
+        try {
+            map_widget.go_to_uri (uri);
+        } catch (Error e) {
+            // TODO: throw error to the UI
+            critical (e.message);
+            return;
+        }
     }
 
     private void on_search_activate () {

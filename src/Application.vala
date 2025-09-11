@@ -16,7 +16,7 @@ public class Maps.Application : Adw.Application {
     public Application () {
         Object (
             application_id: "io.elementary.maps",
-            flags: ApplicationFlags.DEFAULT_FLAGS
+            flags: ApplicationFlags.HANDLES_OPEN
         );
     }
 
@@ -63,6 +63,18 @@ public class Maps.Application : Adw.Application {
             null, null
         );
         add_action (style_action);
+    }
+
+    public override void open (File[] files, string hint) {
+        activate ();
+
+        var file = files[0];
+        if (file == null || !file.has_uri_scheme ("geo")) {
+            critical ("no geo uri scheme");
+            return;
+        }
+
+        ((MainWindow) active_window).go_to_uri (file.get_uri ());
     }
 
     protected override void startup () {
