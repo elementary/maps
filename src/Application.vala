@@ -65,7 +65,7 @@ public class Maps.Application : Adw.Application {
         add_action (style_action);
     }
 
-    public override void open (File[] files, string hint) {
+    protected override void open (File[] files, string hint) {
         activate ();
 
         var file = files[0];
