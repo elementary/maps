@@ -259,9 +259,17 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
         try {
             map_widget.go_to_uri (uri);
         } catch (Error e) {
-            // TODO: throw error to the UI
-            critical (e.message);
-            return;
+            var messagedialog = new Granite.MessageDialog (
+                _("Couldn't open location"),
+                _("Maps wasn't able to parse “%s”. Please report this using the Feedback app.").printf (uri),
+                new ThemedIcon ("find-location")
+            ) {
+                badge_icon = new ThemedIcon ("dialog-error"),
+                modal = true,
+                transient_for = (Gtk.Window) get_root ()
+            };
+            messagedialog.present ();
+            messagedialog.response.connect (messagedialog.destroy);
         }
     }
 
