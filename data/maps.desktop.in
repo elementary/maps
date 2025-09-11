@@ -8,7 +8,7 @@ Categories=GTK;Utility;Science;Maps
 Keywords=trip;explore;
 
 Icon=io.elementary.maps
-Exec=io.elementary.maps
+Exec=io.elementary.maps %u
 SingleMainWindow=true
 StartupNotify=true
 Terminal=false
