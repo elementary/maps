@@ -68,8 +68,12 @@ public class Maps.Application : Adw.Application {
     protected override void open (File[] files, string hint) {
         activate ();
 
+        if (files.length == 0) {
+            return;
+        }
+
         var file = files[0];
-        if (file == null || !file.has_uri_scheme ("geo")) {
+        if (!file.has_uri_scheme ("geo")) {
             critical ("no geo uri scheme");
             return;
         }
