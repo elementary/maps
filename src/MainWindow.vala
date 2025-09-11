@@ -259,7 +259,7 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
         try {
             map_widget.go_to_uri (uri);
         } catch (Error e) {
-            var message_dialog = new Granite.message_dialog (
+            var error_dialog = new Granite.MessageDialog (
                 _("Couldn't open location"),
                 _("Maps wasn't able to parse “%s”. Please report this using the Feedback app.").printf (uri),
                 new ThemedIcon ("find-location")
@@ -268,9 +268,9 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
                 modal = true,
                 transient_for = (Gtk.Window) get_root ()
             };
-            message_dialog.show_error_details (e.message);
-            message_dialog.response.connect (message_dialog.destroy);
-            message_dialog.present ();
+            error_dialog.show_error_details (e.message);
+            error_dialog.response.connect (error_dialog.destroy);
+            error_dialog.present ();
         }
     }
 
