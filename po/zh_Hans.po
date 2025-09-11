@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the io.elementary.maps package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: io.elementary.maps\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-16 11:38+0000\n"
+"PO-Revision-Date: 2025-08-27 03:14+0000\n"
+"Last-Translator: JieXu <xujie0739@qq.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://"
+"l10n.elementaryos.org/projects/maps/maps/zh_Hans/>\n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.11.4\n"
+
+#: src/MainWindow.vala:35
+msgid "Maps"
+msgstr "地图"
+
+#: src/MainWindow.vala:41
+msgid "Move to the current location"
+msgstr "移动到当前位置"
+
+#: src/MainWindow.vala:49
+msgid "Search Maps"
+msgstr "搜索地图"
+
+#: src/MainWindow.vala:57
+msgid "No Results Found"
+msgstr "找不到结果"
+
+#: src/MainWindow.vala:58
+msgid "Try a different search"
+msgstr "请尝试不同的词来搜索"
+
+#: src/MainWindow.vala:104
+msgid "Explore"
+msgstr "探索"
+
+#: src/MainWindow.vala:123
+msgid "Transit"
+msgstr "交通"
+
+#: src/MainWindow.vala:143
+msgid "System"
+msgstr "系统"
+
+#: src/MainWindow.vala:144
+msgid "Light"
+msgstr "亮色"
+
+#: src/MainWindow.vala:145
+msgid "Dark"
+msgstr "深色"
+
+#: src/MainWindow.vala:149
+msgid "Style"
+msgstr "风格"
+
+#: src/MainWindow.vala:155
+msgid "Main Menu"
+msgstr "主菜单"
+
+#: src/MainWindow.vala:190
+msgid "Failed to connect to location service"
+msgstr "连接定位服务失败"
+
+#: src/SearchResultItem.vala:28
+msgid "Unknown"
+msgstr "未知"

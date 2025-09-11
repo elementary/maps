@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the io.elementary.maps package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: io.elementary.maps\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-16 11:38+0000\n"
+"PO-Revision-Date: 2025-07-25 06:41+0000\n"
+"Last-Translator: David M <rbndavid@gmail.com>\n"
+"Language-Team: Catalan <https://l10n.elementaryos.org/projects/maps/maps/ca/>"
+"\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.11.4\n"
+
+#: src/MainWindow.vala:35
+msgid "Maps"
+msgstr "Mapes"
+
+#: src/MainWindow.vala:41
+msgid "Move to the current location"
+msgstr "Desplaça't a la ubicació actual"
+
+#: src/MainWindow.vala:49
+msgid "Search Maps"
+msgstr "Cerca als mapes"
+
+#: src/MainWindow.vala:57
+msgid "No Results Found"
+msgstr "No s'ha trobat cap resultat."
+
+#: src/MainWindow.vala:58
+msgid "Try a different search"
+msgstr "Proveu una cerca diferent."
+
+#: src/MainWindow.vala:104
+msgid "Explore"
+msgstr "Explora"
+
+#: src/MainWindow.vala:123
+msgid "Transit"
+msgstr "Trànsit"
+
+#: src/MainWindow.vala:143
+msgid "System"
+msgstr "Sistema"
+
+#: src/MainWindow.vala:144
+msgid "Light"
+msgstr "Clar"
+
+#: src/MainWindow.vala:145
+msgid "Dark"
+msgstr "Fosc"
+
+#: src/MainWindow.vala:149
+msgid "Style"
+msgstr "Estil"
+
+#: src/MainWindow.vala:155
+msgid "Main Menu"
+msgstr "Menú principal"
+
+#: src/MainWindow.vala:190
+msgid "Failed to connect to location service"
+msgstr "Ha fallat connectar amb el servei de localització."
+
+#: src/SearchResultItem.vala:28
+msgid "Unknown"
+msgstr "Desconegut"
