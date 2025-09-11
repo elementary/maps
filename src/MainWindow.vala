@@ -268,8 +268,8 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
                 modal = true,
                 transient_for = (Gtk.Window) get_root ()
             };
-            messagedialog.present ();
             messagedialog.response.connect (messagedialog.destroy);
+            messagedialog.present ();
         }
     }
 
