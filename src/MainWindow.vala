@@ -266,7 +266,7 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
             ) {
                 badge_icon = new ThemedIcon ("dialog-error"),
                 modal = true,
-                transient_for = (Gtk.Window) get_root ()
+                transient_for = this
             };
             error_dialog.show_error_details (e.message);
             error_dialog.response.connect (error_dialog.destroy);
