@@ -75,8 +75,7 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
         var search_res_list_scrolled = new Gtk.ScrolledWindow () {
             child = search_listview,
             hscrollbar_policy = Gtk.PolicyType.NEVER,
-            max_content_height = 500,
-            propagate_natural_height = true
+            vexpand = true
         };
 
         var search_stack = new Gtk.Stack () {
@@ -87,6 +86,7 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
 
         search_res_popover = new Gtk.Popover () {
             width_request = 400,
+            height_request = 500,
             has_arrow = false,
             child = search_stack
         };
