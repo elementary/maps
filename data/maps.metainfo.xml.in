@@ -58,7 +58,7 @@
   <project_group>elementary</project_group>
 
   <releases>
-    <release version="8.1.0" date="2025-07-14" urgency="medium">
+    <release version="8.1.0" date="2025-09-11" urgency="medium">
       <description>
         <ul>
           <li>Update translations</li>
