@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-16 11:38+0000\n"
+"POT-Creation-Date: 2025-09-13 05:18+0000\n"
 "PO-Revision-Date: 2025-09-12 12:55+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementaryos.org/projects/maps/maps/"
@@ -43,34 +43,44 @@ msgstr "Próbáljon más keresési kifejezést"
 msgid "Explore"
 msgstr "Felfedezés"
 
-#: src/MainWindow.vala:123
+#: src/MainWindow.vala:122
 msgid "Transit"
 msgstr "Közlekedés"
 
-#: src/MainWindow.vala:143
+#: src/MainWindow.vala:142
 msgid "System"
 msgstr "Rendszer"
 
-#: src/MainWindow.vala:144
+#: src/MainWindow.vala:143
 msgid "Light"
 msgstr "Világos"
 
-#: src/MainWindow.vala:145
+#: src/MainWindow.vala:144
 msgid "Dark"
 msgstr "Sötét"
 
-#: src/MainWindow.vala:149
+#: src/MainWindow.vala:148
 msgid "Style"
 msgstr "Téma"
 
-#: src/MainWindow.vala:155
+#: src/MainWindow.vala:154
 msgid "Main Menu"
 msgstr "Főmenü"
 
-#: src/MainWindow.vala:190
+#: src/MainWindow.vala:189
 msgid "Failed to connect to location service"
 msgstr "Nem sikerült csatlakozni a helymeghatározó szolgáltatáshoz"
 
-#: src/SearchResultItem.vala:28
+#: src/MainWindow.vala:263
+msgid "Couldn't open location"
+msgstr ""
+
+#: src/MainWindow.vala:264
+#, c-format
+msgid ""
+"Maps wasn't able to parse “%s”. Please report this using the Feedback app."
+msgstr ""
+
+#: src/SearchResultItem.vala:31
 msgid "Unknown"
 msgstr "Ismeretlen"
