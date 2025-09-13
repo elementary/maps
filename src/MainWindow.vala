@@ -239,7 +239,7 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
 
         search_listview.activate.connect ((pos) => {
             var place = (Geocode.Place) selection_model.get_item (pos);
-            map_widget.go_to_place (place);
+            map_widget.go_to_location (place.location);
             search_res_popover.popdown ();
         });
 
@@ -253,6 +253,25 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
         search_res_popover.unparent ();
         map_widget.save_map_state ();
         destroy ();
+    }
+
+    public void go_to_uri (string uri) {
+        try {
+            map_widget.go_to_uri (uri);
+        } catch (Error e) {
+            var error_dialog = new Granite.MessageDialog (
+                _("Couldn't open location"),
+                _("Maps wasn't able to parse “%s”. Please report this using the Feedback app.").printf (uri),
+                new ThemedIcon ("find-location")
+            ) {
+                badge_icon = new ThemedIcon ("dialog-error"),
+                modal = true,
+                transient_for = this
+            };
+            error_dialog.show_error_details (e.message);
+            error_dialog.response.connect (error_dialog.destroy);
+            error_dialog.present ();
+        }
     }
 
     private void on_search_activate () {
