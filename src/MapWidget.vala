@@ -54,6 +54,10 @@ public class Maps.MapWidget : Gtk.Box {
 
     // Set the initial location of the map widget.
     private void set_init_place () {
+        if (base_map.viewport.latitude != 0 || base_map.viewport.longitude != 0) {
+            return;
+        }
+
         Shumate.MapSource map_source = map_widget.map_source;
 
         double latitude = Maps.Application.settings.get_double ("latitude");
@@ -136,12 +140,19 @@ public class Maps.MapWidget : Gtk.Box {
         base_map.go_to_full (location.latitude, location.longitude, DEFAULT_ZOOM_LEVEL);
     }
 
-    public void go_to_place (Geocode.Place place) {
-        Geocode.Location loc = place.location;
+    public void go_to_uri (string uri) throws Error {
+        var location = new Geocode.Location (base_map.viewport.latitude, base_map.viewport.longitude);
 
-        clear_pin ();
-        mark_pin_at (loc.latitude, loc.longitude);
-        base_map.go_to (loc.latitude, loc.longitude);
+        // we get an uri that looks like geo:///lat,lon, remove slashes
+        location.set_from_uri (uri.replace ("///", ""));
+
+        go_to_location (location);
+    }
+
+    public void go_to_location (Geocode.Location location) {
+        pin_layer.remove_all ();
+        mark_pin_at (location.latitude, location.longitude);
+        base_map.go_to_full (location.latitude, location.longitude, DEFAULT_ZOOM_LEVEL);
     }
 
     // Saves the latest state of the map.
@@ -153,10 +164,6 @@ public class Maps.MapWidget : Gtk.Box {
 
     private void clear_location () {
         location_layer.remove_all ();
-    }
-
-    private void clear_pin () {
-        pin_layer.remove_all ();
     }
 
     private void mark_location_at (double latitude, double longitude) {

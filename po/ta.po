@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-16 11:38+0000\n"
+"POT-Creation-Date: 2025-09-13 05:18+0000\n"
 "PO-Revision-Date: 2025-07-04 15:03+0000\n"
 "Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/rosp/atlas/ta/>\n"
@@ -46,40 +46,50 @@ msgstr "வேறு தேடலை முயற்சிக்கவும்"
 msgid "Explore"
 msgstr ""
 
-#: src/MainWindow.vala:123
+#: src/MainWindow.vala:122
 #, fuzzy
 msgid "Transit"
 msgstr "போக்குவரத்து"
 
-#: src/MainWindow.vala:143
+#: src/MainWindow.vala:142
 #, fuzzy
 msgid "System"
 msgstr "முறைமை"
 
-#: src/MainWindow.vala:144
+#: src/MainWindow.vala:143
 #, fuzzy
 msgid "Light"
 msgstr "விளக்கு"
 
-#: src/MainWindow.vala:145
+#: src/MainWindow.vala:144
 #, fuzzy
 msgid "Dark"
 msgstr "இருண்ட"
 
-#: src/MainWindow.vala:149
+#: src/MainWindow.vala:148
 #, fuzzy
 msgid "Style"
 msgstr "பாணி"
 
-#: src/MainWindow.vala:155
+#: src/MainWindow.vala:154
 msgid "Main Menu"
 msgstr "பட்டியல் விளையாடுங்கள்"
 
-#: src/MainWindow.vala:190
+#: src/MainWindow.vala:189
 msgid "Failed to connect to location service"
 msgstr "இருப்பிட சேவையுடன் இணைக்கத் தவறிவிட்டது"
 
-#: src/SearchResultItem.vala:28
+#: src/MainWindow.vala:263
+msgid "Couldn't open location"
+msgstr ""
+
+#: src/MainWindow.vala:264
+#, c-format
+msgid ""
+"Maps wasn't able to parse “%s”. Please report this using the Feedback app."
+msgstr ""
+
+#: src/SearchResultItem.vala:31
 msgid "Unknown"
 msgstr "தெரியவில்லை"
 

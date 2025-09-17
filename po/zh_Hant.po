@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-16 11:38+0000\n"
+"POT-Creation-Date: 2025-09-13 05:18+0000\n"
 "PO-Revision-Date: 2025-08-22 15:58+0000\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://"
@@ -43,34 +43,44 @@ msgstr "請嘗試別的關鍵字"
 msgid "Explore"
 msgstr "探索"
 
-#: src/MainWindow.vala:123
+#: src/MainWindow.vala:122
 msgid "Transit"
 msgstr "交通工具"
 
-#: src/MainWindow.vala:143
+#: src/MainWindow.vala:142
 msgid "System"
 msgstr "系統"
 
-#: src/MainWindow.vala:144
+#: src/MainWindow.vala:143
 msgid "Light"
 msgstr "亮色"
 
-#: src/MainWindow.vala:145
+#: src/MainWindow.vala:144
 msgid "Dark"
 msgstr "深色"
 
-#: src/MainWindow.vala:149
+#: src/MainWindow.vala:148
 msgid "Style"
 msgstr "風格"
 
-#: src/MainWindow.vala:155
+#: src/MainWindow.vala:154
 msgid "Main Menu"
 msgstr "主選單"
 
-#: src/MainWindow.vala:190
+#: src/MainWindow.vala:189
 msgid "Failed to connect to location service"
 msgstr "連接位置服務失敗"
 
-#: src/SearchResultItem.vala:28
+#: src/MainWindow.vala:263
+msgid "Couldn't open location"
+msgstr ""
+
+#: src/MainWindow.vala:264
+#, c-format
+msgid ""
+"Maps wasn't able to parse “%s”. Please report this using the Feedback app."
+msgstr ""
+
+#: src/SearchResultItem.vala:31
 msgid "Unknown"
 msgstr "未知"

@@ -7,67 +7,80 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-16 11:38+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"POT-Creation-Date: 2025-09-13 05:18+0000\n"
+"PO-Revision-Date: 2025-09-12 12:55+0000\n"
+"Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
+"Language-Team: Hungarian <https://l10n.elementaryos.org/projects/maps/maps/"
+"hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: src/MainWindow.vala:35
 msgid "Maps"
-msgstr ""
+msgstr "Térkép"
 
 #: src/MainWindow.vala:41
 msgid "Move to the current location"
-msgstr ""
+msgstr "A jelenlegi helyzetre ugrás"
 
 #: src/MainWindow.vala:49
 msgid "Search Maps"
-msgstr ""
+msgstr "Keresés"
 
 #: src/MainWindow.vala:57
 msgid "No Results Found"
-msgstr ""
+msgstr "Nincs találat"
 
 #: src/MainWindow.vala:58
 msgid "Try a different search"
-msgstr ""
+msgstr "Próbáljon más keresési kifejezést"
 
 #: src/MainWindow.vala:104
 msgid "Explore"
-msgstr ""
+msgstr "Felfedezés"
 
-#: src/MainWindow.vala:123
+#: src/MainWindow.vala:122
 msgid "Transit"
-msgstr ""
+msgstr "Közlekedés"
+
+#: src/MainWindow.vala:142
+msgid "System"
+msgstr "Rendszer"
 
 #: src/MainWindow.vala:143
-msgid "System"
-msgstr ""
+msgid "Light"
+msgstr "Világos"
 
 #: src/MainWindow.vala:144
-msgid "Light"
-msgstr ""
-
-#: src/MainWindow.vala:145
 msgid "Dark"
-msgstr ""
+msgstr "Sötét"
 
-#: src/MainWindow.vala:149
+#: src/MainWindow.vala:148
 msgid "Style"
-msgstr ""
+msgstr "Téma"
 
-#: src/MainWindow.vala:155
+#: src/MainWindow.vala:154
 msgid "Main Menu"
-msgstr ""
+msgstr "Főmenü"
 
-#: src/MainWindow.vala:190
+#: src/MainWindow.vala:189
 msgid "Failed to connect to location service"
+msgstr "Nem sikerült csatlakozni a helymeghatározó szolgáltatáshoz"
+
+#: src/MainWindow.vala:263
+msgid "Couldn't open location"
 msgstr ""
 
-#: src/SearchResultItem.vala:28
-msgid "Unknown"
+#: src/MainWindow.vala:264
+#, c-format
+msgid ""
+"Maps wasn't able to parse “%s”. Please report this using the Feedback app."
 msgstr ""
+
+#: src/SearchResultItem.vala:31
+msgid "Unknown"
+msgstr "Ismeretlen"
