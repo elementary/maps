@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-13 05:18+0000\n"
-"PO-Revision-Date: 2025-09-12 12:55+0000\n"
+"PO-Revision-Date: 2025-09-20 12:55+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementaryos.org/projects/maps/maps/"
 "hu/>\n"
@@ -73,13 +73,15 @@ msgstr "Nem sikerült csatlakozni a helymeghatározó szolgáltatáshoz"
 
 #: src/MainWindow.vala:263
 msgid "Couldn't open location"
-msgstr ""
+msgstr "A hely megnyitása sikertelen"
 
 #: src/MainWindow.vala:264
 #, c-format
 msgid ""
 "Maps wasn't able to parse “%s”. Please report this using the Feedback app."
 msgstr ""
+"A Térkép nem tudta kezelni a következőt: “%s”. Kérjük, jelentse ezt a "
+"Visszajelzés alkalmazásban."
 
 #: src/SearchResultItem.vala:31
 msgid "Unknown"
