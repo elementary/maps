@@ -3,9 +3,3 @@ io.elementary.maps (8.1.0) noble; urgency=medium
   * Release 8.1.0 (#167)
 
  -- elementary, Inc. <builds@elementary.io>  Sat, 20 Sep 2025 22:49:10 +0000
-
-io.elementary.maps (8.1.0) noble; urgency=medium
-
-  * Initial Release.
-
- -- Ryo Nakano <ryonakaknock3@gmail.com>  Sun, 13 Jul 2025 00:37:00 +0900
