@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-16 11:38+0000\n"
-"PO-Revision-Date: 2025-07-17 18:55+0000\n"
+"POT-Creation-Date: 2025-09-13 05:18+0000\n"
+"PO-Revision-Date: 2025-09-14 07:55+0000\n"
 "Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementaryos.org/projects/maps/maps/ru/>"
 "\n"
@@ -46,35 +46,47 @@ msgstr "Попробуйте найти что-нибудь другое"
 msgid "Explore"
 msgstr "Обзор"
 
-#: src/MainWindow.vala:123
+#: src/MainWindow.vala:122
 msgid "Transit"
 msgstr "Транспорт"
 
-#: src/MainWindow.vala:143
+#: src/MainWindow.vala:142
 msgid "System"
 msgstr "Системный"
 
-#: src/MainWindow.vala:144
+#: src/MainWindow.vala:143
 msgid "Light"
 msgstr "Светлый"
 
-#: src/MainWindow.vala:145
+#: src/MainWindow.vala:144
 msgid "Dark"
 msgstr "Тёмный"
 
-#: src/MainWindow.vala:149
+#: src/MainWindow.vala:148
 msgid "Style"
 msgstr "Стиль"
 
-#: src/MainWindow.vala:155
+#: src/MainWindow.vala:154
 msgid "Main Menu"
 msgstr "Главное меню"
 
-#: src/MainWindow.vala:190
+#: src/MainWindow.vala:189
 msgid "Failed to connect to location service"
 msgstr "Не удалось подключиться к службе местоположения"
 
-#: src/SearchResultItem.vala:28
+#: src/MainWindow.vala:263
+msgid "Couldn't open location"
+msgstr "Не удалось открыть локацию"
+
+#: src/MainWindow.vala:264
+#, c-format
+msgid ""
+"Maps wasn't able to parse “%s”. Please report this using the Feedback app."
+msgstr ""
+"Картам не удалось распознать «%s». Вы можете сообщить об этом в приложении «"
+"Обратная связь»."
+
+#: src/SearchResultItem.vala:31
 msgid "Unknown"
 msgstr "Неизвестно"
 
