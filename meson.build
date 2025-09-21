@@ -1,7 +1,7 @@
 project(
     'io.elementary.maps',
     'vala', 'c',
-    version: '3.1.1',
+    version: '8.1.0',
     # Version limitation for gnome.post_install()
     meson_version: '>= 0.57.0'
 )
