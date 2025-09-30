@@ -10,19 +10,20 @@ msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-13 05:18+0000\n"
-"PO-Revision-Date: 2024-05-03 10:45+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
-"Language-Team: Finnish <https://hosted.weblate.org/projects/rosp/atlas/fi/>\n"
+"PO-Revision-Date: 2025-09-29 19:55+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
+"Language-Team: Finnish <https://l10n.elementaryos.org/projects/maps/maps/fi/>"
+"\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.3\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: src/MainWindow.vala:35
 msgid "Maps"
-msgstr ""
+msgstr "Kartat"
 
 #: src/MainWindow.vala:41
 msgid "Move to the current location"
@@ -35,13 +36,12 @@ msgid "Search Maps"
 msgstr "Etsi sijaintia"
 
 #: src/MainWindow.vala:57
-#, fuzzy
 msgid "No Results Found"
-msgstr "Ei hakutuloksia"
+msgstr "Tuloksia ei löytynyt"
 
 #: src/MainWindow.vala:58
 msgid "Try a different search"
-msgstr ""
+msgstr "Kokeile eri hakuehtoja"
 
 #: src/MainWindow.vala:104
 msgid "Explore"
@@ -53,36 +53,32 @@ msgid "Transit"
 msgstr "Liikkumiskartta"
 
 #: src/MainWindow.vala:142
-#, fuzzy
 msgid "System"
 msgstr "Järjestelmä"
 
 #: src/MainWindow.vala:143
-#, fuzzy
 msgid "Light"
 msgstr "Vaalea"
 
 #: src/MainWindow.vala:144
-#, fuzzy
 msgid "Dark"
 msgstr "Tumma"
 
 #: src/MainWindow.vala:148
-#, fuzzy
 msgid "Style"
-msgstr "Tyyli:"
+msgstr "Tyyli"
 
 #: src/MainWindow.vala:154
 msgid "Main Menu"
-msgstr ""
+msgstr "Päävalikko"
 
 #: src/MainWindow.vala:189
 msgid "Failed to connect to location service"
-msgstr ""
+msgstr "Yhteys sijaintipalveluun epäonnistui"
 
 #: src/MainWindow.vala:263
 msgid "Couldn't open location"
-msgstr ""
+msgstr "Sijaintia ei voitu avata"
 
 #: src/MainWindow.vala:264
 #, c-format

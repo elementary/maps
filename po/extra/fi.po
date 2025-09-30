@@ -10,19 +10,20 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-13 05:18+0000\n"
-"PO-Revision-Date: 2024-05-03 10:45+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
-"Language-Team: Finnish <https://hosted.weblate.org/projects/rosp/atlas/fi/>\n"
+"PO-Revision-Date: 2025-09-29 19:55+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
+"Language-Team: Finnish <https://l10n.elementaryos.org/projects/maps/"
+"maps-extra/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.3\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: data/maps.desktop.in:6 data/maps.metainfo.xml.in:10
 msgid "Maps"
-msgstr ""
+msgstr "Kartat"
 
 #: data/maps.desktop.in:7 data/maps.metainfo.xml.in:11
 msgid "View where to go"
@@ -61,7 +62,7 @@ msgstr ""
 
 #: data/maps.metainfo.xml.in:56
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/maps.metainfo.xml.in:64
 msgid "Update translations"
