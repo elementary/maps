@@ -1,4 +1,4 @@
 src/Application.vala
 src/MainWindow.vala
-src/SearchResultItem.vala
 src/MapWidget.vala
+src/SearchResultItem.vala
