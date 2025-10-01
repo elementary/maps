@@ -171,7 +171,7 @@ public class Maps.MapWidget : Gtk.Box {
             latitude = latitude,
             longitude = longitude,
             selectable = true,
-            tooltip_text = _("You are here! (Approximately)")
+            tooltip_text = _("You are here")
         };
 
         location_layer.add_marker (marker);
