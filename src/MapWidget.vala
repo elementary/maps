@@ -170,7 +170,8 @@ public class Maps.MapWidget : Gtk.Box {
         var marker = new Shumate.Point () {
             latitude = latitude,
             longitude = longitude,
-            selectable = true
+            selectable = true,
+            tooltip_text = _("You are here")
         };
 
         location_layer.add_marker (marker);
