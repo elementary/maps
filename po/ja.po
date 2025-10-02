@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-13 05:18+0000\n"
+"POT-Creation-Date: 2025-10-02 03:40+0000\n"
 "PO-Revision-Date: 2025-09-20 12:55+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementaryos.org/projects/maps/maps/ja/"
@@ -81,8 +81,13 @@ msgstr "指定された場所を開けませんでした"
 #, c-format
 msgid ""
 "Maps wasn't able to parse “%s”. Please report this using the Feedback app."
-msgstr "“マップ” は “%s” を解析できませんでした。“フィードバック” "
-"アプリを使って、この問題を報告してください。"
+msgstr ""
+"“マップ” は “%s” を解析できませんでした。“フィードバック” アプリを使って、こ"
+"の問題を報告してください。"
+
+#: src/MapWidget.vala:174
+msgid "You are here"
+msgstr ""
 
 #: src/SearchResultItem.vala:31
 msgid "Unknown"
