@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-02 03:40+0000\n"
-"PO-Revision-Date: 2025-09-20 12:55+0000\n"
+"PO-Revision-Date: 2025-10-04 23:55+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementaryos.org/projects/maps/maps/ja/"
 ">\n"
@@ -87,7 +87,7 @@ msgstr ""
 
 #: src/MapWidget.vala:174
 msgid "You are here"
-msgstr ""
+msgstr "現在地"
 
 #: src/SearchResultItem.vala:31
 msgid "Unknown"
