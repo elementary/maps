@@ -8,13 +8,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-02 03:40+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-10-25 08:48+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"Language-Team: Swedish <https://l10n.elementaryos.org/projects/maps/"
+"maps-extra/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: data/maps.desktop.in:6 data/maps.metainfo.xml.in:10
 msgid "Maps"
@@ -22,42 +25,44 @@ msgstr ""
 
 #: data/maps.desktop.in:7 data/maps.metainfo.xml.in:11
 msgid "View where to go"
-msgstr ""
+msgstr "Visa var du ska åka"
 
 #: data/maps.desktop.in:9
 msgid "trip;explore;"
-msgstr ""
+msgstr "resa;utforska;"
 
 #: data/maps.metainfo.xml.in:13
 msgid "A map app that helps you to see where you want to go."
-msgstr ""
+msgstr "En kartapp som hjälper dig att se vart du vill åka."
 
 #: data/maps.metainfo.xml.in:16
 msgid "Features include:"
-msgstr ""
+msgstr "Funktioner inkluderar:"
 
 #: data/maps.metainfo.xml.in:18
 msgid "Search any place"
-msgstr ""
+msgstr "Sök efter valfri plats"
 
 #: data/maps.metainfo.xml.in:19
 msgid "Jump to your current location instantly"
-msgstr ""
+msgstr "Hoppa till din aktuella plats direkt"
 
 #: data/maps.metainfo.xml.in:21
 msgid ""
 "This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
 "Schuhmann."
 msgstr ""
+"Detta är en förgrening av \"Atlas Maps\" och skulle inte finnas utan hjälpen "
+"från Steffen Schuhmann."
 
 #: data/maps.metainfo.xml.in:28 data/maps.metainfo.xml.in:32
 msgid "See locations on a map"
-msgstr ""
+msgstr "Se platser på en karta"
 
 #: data/maps.metainfo.xml.in:56
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/maps.metainfo.xml.in:64
 msgid "Update translations"
-msgstr ""
+msgstr "Uppdatera översättningar"
