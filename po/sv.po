@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-02 03:40+0000\n"
-"PO-Revision-Date: 2025-10-24 10:24+0000\n"
+"PO-Revision-Date: 2025-11-01 08:55+0000\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <https://l10n.elementaryos.org/projects/maps/maps/sv/>"
 "\n"
@@ -29,7 +29,7 @@ msgstr "Flytta till den aktuella platsen"
 
 #: src/MainWindow.vala:49
 msgid "Search Maps"
-msgstr "Sök kartor"
+msgstr "Sök i kartor"
 
 #: src/MainWindow.vala:57
 msgid "No Results Found"
