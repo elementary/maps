@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-02 03:40+0000\n"
-"PO-Revision-Date: 2025-09-03 19:55+0000\n"
-"Last-Translator: DutchVipperloid <svenroelof@e.email>\n"
+"PO-Revision-Date: 2025-11-30 07:55+0000\n"
+"Last-Translator: Bas Ernst <bas@ernstgenova.it>\n"
 "Language-Team: Dutch <https://l10n.elementaryos.org/projects/maps/maps/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -75,17 +75,18 @@ msgstr "Kon niet verbinden met de locatieservice"
 
 #: src/MainWindow.vala:263
 msgid "Couldn't open location"
-msgstr ""
+msgstr "Kan de locatie niet openen"
 
 #: src/MainWindow.vala:264
 #, c-format
 msgid ""
 "Maps wasn't able to parse “%s”. Please report this using the Feedback app."
 msgstr ""
+"Kaarten was niet in staat \"%s\" te verwerken. Meld dit via de Feedback-app."
 
 #: src/MapWidget.vala:174
 msgid "You are here"
-msgstr ""
+msgstr "Je bent hier"
 
 #: src/SearchResultItem.vala:31
 msgid "Unknown"
