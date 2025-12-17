@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-02 03:40+0000\n"
-"PO-Revision-Date: 2025-07-31 00:55+0000\n"
+"PO-Revision-Date: 2025-12-18 23:55+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementaryos.org/projects/maps/maps/"
 "uk/>\n"
@@ -77,17 +77,19 @@ msgstr "Не вдалося під'єднатися до служби визна
 
 #: src/MainWindow.vala:263
 msgid "Couldn't open location"
-msgstr ""
+msgstr "Неможливо відкрити розташування"
 
 #: src/MainWindow.vala:264
 #, c-format
 msgid ""
 "Maps wasn't able to parse “%s”. Please report this using the Feedback app."
 msgstr ""
+"Мапи не змогли проаналізувати «%s». Повідомте про це за допомогою застосунку "
+"«Відгук»."
 
 #: src/MapWidget.vala:174
 msgid "You are here"
-msgstr ""
+msgstr "Ви тут"
 
 #: src/SearchResultItem.vala:31
 msgid "Unknown"
