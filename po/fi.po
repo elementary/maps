@@ -10,10 +10,10 @@ msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-02 03:40+0000\n"
-"PO-Revision-Date: 2025-09-29 19:55+0000\n"
+"PO-Revision-Date: 2026-03-22 15:56+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
-"Language-Team: Finnish <https://l10n.elementaryos.org/projects/maps/maps/fi/"
-">\n"
+"Language-Team: Finnish <https://l10n.elementaryos.org/projects/maps/maps/fi/>"
+"\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,7 +45,7 @@ msgstr "Kokeile eri hakuehtoja"
 
 #: src/MainWindow.vala:104
 msgid "Explore"
-msgstr ""
+msgstr "Selaa"
 
 #: src/MainWindow.vala:122
 #, fuzzy
@@ -88,7 +88,7 @@ msgstr ""
 
 #: src/MapWidget.vala:174
 msgid "You are here"
-msgstr ""
+msgstr "Olet täällä"
 
 #: src/SearchResultItem.vala:31
 msgid "Unknown"
