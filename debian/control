@@ -1,7 +1,7 @@
 Source: io.elementary.maps
 Section: x11
 Priority: optional
-Maintainer: elementary, Inc. <builds@elementary.io>
+Maintainer: elementary <builds@elementary.io>
 Build-Depends: debhelper-compat (= 13),
                gettext,
                libadwaita-1-dev,
