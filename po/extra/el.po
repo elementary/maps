@@ -8,18 +8,20 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-02 03:40+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-06-30 00:56+0000\n"
+"Last-Translator: Jim Spentzos <jimspentzos2000@gmail.com>\n"
+"Language-Team: Greek <https://l10n.elementaryos.org/projects/maps/maps-extra/"
+"el/>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.5\n"
 
 #: data/maps.desktop.in:6 data/maps.metainfo.xml.in:10
 msgid "Maps"
-msgstr ""
+msgstr "Χάρτες"
 
 #: data/maps.desktop.in:7 data/maps.metainfo.xml.in:11
 msgid "View where to go"
@@ -57,8 +59,8 @@ msgstr ""
 
 #: data/maps.metainfo.xml.in:56
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/maps.metainfo.xml.in:64
 msgid "Update translations"
-msgstr ""
+msgstr "Ενημερωμένες μεταφράσεις"
