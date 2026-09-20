@@ -1,6 +1,6 @@
 id: io.elementary.maps
 runtime: io.elementary.Platform
-runtime-version: '8.2'
+runtime-version: 'daily'
 sdk: io.elementary.Sdk
 command: io.elementary.maps
 finish-args:
