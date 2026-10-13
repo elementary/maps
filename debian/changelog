@@ -1,3 +1,9 @@
+io.elementary.maps (9.0.0) noble; urgency=medium
+
+  * Release 9.0.0 (#192)
+
+ -- elementary <builds@elementary.io>  Tue, 13 Oct 2026 17:49:12 +0000
+
 io.elementary.maps (8.1.0) noble; urgency=medium
 
   * Release 8.1.0 (#167)
