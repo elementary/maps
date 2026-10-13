@@ -26,11 +26,11 @@
   <screenshots>
     <screenshot type="default" environment="pantheon">
       <caption>See locations on a map</caption>
-      <image>https://raw.githubusercontent.com/elementary/maps/8.1.0/data/screenshots/screenshot-light.png</image>
+      <image>https://raw.githubusercontent.com/elementary/maps/9.0.0/data/screenshots/screenshot-light.png</image>
     </screenshot>
     <screenshot environment="pantheon:dark">
       <caption>See locations on a map</caption>
-      <image>https://raw.githubusercontent.com/elementary/maps/8.1.0/data/screenshots/screenshot-dark.png</image>
+      <image>https://raw.githubusercontent.com/elementary/maps/9.0.0/data/screenshots/screenshot-dark.png</image>
     </screenshot>
   </screenshots>
 
@@ -58,6 +58,15 @@
   <project_group>elementary</project_group>
 
   <releases>
+    <release version="9.0.0" date="2026-10-12" urgency="medium">
+      <description>
+        <ul>
+          <li>Add a tooltip for the current location</li>
+          <li>Update translations</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="8.1.0" date="2025-09-20" urgency="medium">
       <description>
         <ul>
