@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-02 03:40+0000\n"
-"PO-Revision-Date: 2025-07-24 20:31+0000\n"
-"Last-Translator: Renato Trevisan <rjltrevisan@gmail.com>\n"
+"PO-Revision-Date: 2026-10-22 04:04+0000\n"
+"Last-Translator: Felipe Williams <felipewilliam@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementaryos.org/projects/"
 "maps/maps/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.11.4\n"
+"X-Generator: Weblate 2026.5\n"
 
 #: src/MainWindow.vala:35
 msgid "Maps"
@@ -75,7 +75,7 @@ msgstr "Falha ao conectar ao serviço de localização"
 
 #: src/MainWindow.vala:263
 msgid "Couldn't open location"
-msgstr ""
+msgstr "Não foi possível abrir a localização"
 
 #: src/MainWindow.vala:264
 #, c-format
@@ -85,7 +85,7 @@ msgstr ""
 
 #: src/MapWidget.vala:174
 msgid "You are here"
-msgstr ""
+msgstr "Você está aqui"
 
 #: src/SearchResultItem.vala:31
 msgid "Unknown"
