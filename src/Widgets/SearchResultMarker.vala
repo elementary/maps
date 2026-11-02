@@ -26,8 +26,8 @@ public class Maps.SearchResultMarker : Shumate.Marker {
         Object (
             latitude: place.location.latitude,
             longitude: place.location.longitude,
-            loc_name: place.name ?? "",
-            loc_address: place.street_address ?? "",
+            loc_name: place.name ?? _("Unknown"),
+            loc_address: place.street_address ?? _("Unknown"),
             tooltip_text: place.name ?? ""
         );
     }
