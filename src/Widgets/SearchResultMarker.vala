@@ -6,35 +6,59 @@
  */
 
 /**
- * SearchResultMarker is a subclass of {@link Shumate.Marker} built from a position
+ * SearchResultMarker is a subclass of {@link Shumate.Marker} built from a {@link Geocode.Location}
  *
  * It displays a pointer on the map which when clicked shows a popover offering the user to create a new pin for this location
  *
- * It is created by {@link Maps.Map_Widget} as the result of a search initiated by the user
+ * It is created by {@link Maps.Map_Widget} when user selects a result of a search
  */
 public class Maps.SearchResultMarker : Shumate.Marker {
 
     public signal void create_pin (MarkerData markerdata);
-    private Gtk.Button button;
 
-    public SearchResultMarker (double latitude, double longitude) {
+    public string loc_name {get; set;}
+    public string loc_address {get; set;}
+
+    private Gtk.Button button;
+    private Gtk.Popover popover;
+
+    public SearchResultMarker (Geocode.Place place) {
         Object (
-            latitude: latitude,
-            longitude: longitude
+            latitude: place.location.latitude,
+            longitude: place.location.longitude,
+            loc_name: place.name ?? "",
+            loc_address: place.street_address ?? "",
+            tooltip_text: place.name ?? ""
         );
     }
 
     construct {
-        button = new Gtk.Button.with_label (_("Create new pin")) {
+        var box = new Granite.Box (Gtk.Orientation.VERTICAL, Granite.Box.Spacing.SINGLE) {
             margin_top = 10,
             margin_bottom = 10,
             margin_start = 10,
             margin_end = 10,
-            width_request = 80
+            width_request = 90
         };
 
-        var popover = new Gtk.Popover () {
-            child = button
+        var box_description = new Granite.Box (Gtk.Orientation.VERTICAL, HALF);
+
+        var headerlabel = new Granite.HeaderLabel (loc_name);
+        var label = new Gtk.Label (loc_address);
+        label.add_css_class (Granite.CssClass.DIM);
+
+        box_description.append (headerlabel);
+        box_description.append (label);
+
+        button = new Gtk.Button.with_label (_("Create new pin")) {
+            has_frame = false
+        };
+
+        box.append (box_description);
+        box.append (button);
+
+        popover = new Gtk.Popover () {
+            child = box
         };
 
         var image = new Gtk.Image.from_icon_name ("pointer") {
@@ -54,7 +78,11 @@ public class Maps.SearchResultMarker : Shumate.Marker {
     }
 
     private void on_button_click () {
-        var new_marker_data = new MarkerData (latitude, longitude);
+        popover.popdown ();
+        var new_marker_data = new MarkerData (latitude, longitude) {
+            name = loc_name,
+            comments = loc_address
+        };
         create_pin (new_marker_data);
     }
 }

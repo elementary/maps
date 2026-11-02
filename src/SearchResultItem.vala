@@ -22,6 +22,7 @@ public class Maps.SearchResultItem : Granite.Bin {
             image.icon_name = place.icon.to_string () + "-symbolic";
             name_label.label = place.name;
             info_label.label = "%s, %s, %s".printf (street, postal_code, town);
+            place.street_address = info_label.label;
 
             // Not add because this widget gets recycled
             css_classes = {placetype_to_cssclass (place.place_type)};

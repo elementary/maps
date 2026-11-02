@@ -161,18 +161,21 @@ public class Maps.MapWidget : Gtk.Box {
         // we get an uri that looks like geo:///lat,lon, remove slashes
         location.set_from_uri (uri.replace ("///", ""));
 
-        go_to_location (location);
+        var place = new Geocode.Place.with_location (_("Location"), Geocode.PlaceType.UNKNOWN, location);
+        go_to_place (place);
     }
 
-    public void go_to_location (Geocode.Location location) {
+    public void go_to_place (Geocode.Place place) {
         search_layer.remove_all ();
+        var search_result_marker = new SearchResultMarker (place);
 
-        var search_result_marker = new SearchResultMarker (location.latitude, location.longitude);
-        search_result_marker.create_pin.connect (marker_manager.add_marker);
-        search_result_marker.create_pin.connect_after (() => {search_layer.remove_all ();});
+        search_result_marker.create_pin.connect ((markerdata) => {
+            search_layer.remove_all ();
+            marker_manager.add_marker (markerdata);
+        });
+
         search_layer.add_marker (search_result_marker);
-
-        base_map.go_to_full (location.latitude, location.longitude, DEFAULT_ZOOM_LEVEL);
+        base_map.go_to_full (place.location.latitude, place.location.longitude, DEFAULT_ZOOM_LEVEL);
     }
 
     // Saves the latest state of the map.

@@ -164,6 +164,6 @@ public class Maps.Marker : Shumate.Marker {
         return new MarkerData (latitude, longitude) {
             name = loc_name,
             comments = loc_comments
-        };;
+        };
     }
 }
