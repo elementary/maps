@@ -257,7 +257,7 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
 
         search_listview.activate.connect ((pos) => {
             var place = (Geocode.Place) selection_model.get_item (pos);
-            map_widget.go_to_place (place);
+            map_widget.go_to_place (place, place.name, place.street_address);
             search_res_popover.popdown ();
         });
 

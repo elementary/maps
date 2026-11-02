@@ -165,9 +165,12 @@ public class Maps.MapWidget : Gtk.Box {
         go_to_place (place);
     }
 
-    public void go_to_place (Geocode.Place place) {
+    public void go_to_place (Geocode.Place place, string? name = _("Unknown"), string? address = _("Unknown")) {
         search_layer.remove_all ();
-        var search_result_marker = new SearchResultMarker (place);
+        var search_result_marker = new SearchResultMarker (place) {
+            loc_name = name,
+            loc_address = address
+        };
 
         search_result_marker.create_pin.connect ((markerdata) => {
             search_layer.remove_all ();
