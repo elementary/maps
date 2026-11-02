@@ -55,6 +55,7 @@ public class Maps.SearchResultMarker : Shumate.Marker {
 
         headerlabel = new Granite.HeaderLabel ("");
         var button = new Gtk.Button.with_label (_("Create new pin"));
+        button.add_css_class (Granite.CssClass.SUGGESTED);
 
         box.append (headerlabel);
         box.append (button);
