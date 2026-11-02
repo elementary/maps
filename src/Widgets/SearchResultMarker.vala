@@ -16,8 +16,8 @@ public class Maps.SearchResultMarker : Shumate.Marker {
 
     public signal void create_pin (MarkerData markerdata);
 
-    public string loc_name {get; set;}
-    public string loc_address {get; set;}
+    //  public string loc_name {get; set;}
+    //  public string loc_address {get; set;}
 
     private Gtk.Button button;
     private Gtk.Popover popover;
@@ -26,8 +26,8 @@ public class Maps.SearchResultMarker : Shumate.Marker {
         Object (
             latitude: place.location.latitude,
             longitude: place.location.longitude,
-            loc_name: place.name ?? _("Unknown"),
-            loc_address: place.street_address ?? _("Unknown"),
+            //  loc_name: place.name ?? _("Unknown"),
+            //  loc_address: place.street_address ?? _("Unknown"),
             tooltip_text: place.name ?? ""
         );
     }
@@ -41,6 +41,7 @@ public class Maps.SearchResultMarker : Shumate.Marker {
             width_request = 90
         };
 
+        /*  
         var box_description = new Granite.Box (Gtk.Orientation.VERTICAL, HALF);
 
         var headerlabel = new Granite.HeaderLabel (loc_name);
@@ -49,12 +50,12 @@ public class Maps.SearchResultMarker : Shumate.Marker {
 
         box_description.append (headerlabel);
         box_description.append (label);
+        box.append (box_description);  */
 
         button = new Gtk.Button.with_label (_("Create new pin")) {
             has_frame = false
         };
 
-        box.append (box_description);
         box.append (button);
 
         popover = new Gtk.Popover () {
@@ -80,8 +81,8 @@ public class Maps.SearchResultMarker : Shumate.Marker {
     private void on_button_click () {
         popover.popdown ();
         var new_marker_data = new MarkerData (latitude, longitude) {
-            name = loc_name,
-            comments = loc_address
+            //name = loc_name,
+            //comments = loc_address
         };
         create_pin (new_marker_data);
     }
