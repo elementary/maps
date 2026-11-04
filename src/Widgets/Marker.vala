@@ -83,7 +83,7 @@ public class Maps.Marker : Shumate.Marker {
 
         var frame_comments = new Gtk.Frame (null) {
             child = scrolled_comments,
-            height_request = 110,
+            height_request = 50,
             hexpand = true,
             vexpand = true
         };
@@ -124,8 +124,8 @@ public class Maps.Marker : Shumate.Marker {
         child = menubutton;
         textview_comments.grab_focus ();
 
-        bind_property ("loc-name",
-            menubutton, "tooltip-text",
+        entry_name.bind_property ("text",
+            this, "tooltip-text",
             GLib.BindingFlags.DEFAULT | GLib.BindingFlags.SYNC_CREATE
         );
 
@@ -133,6 +133,7 @@ public class Maps.Marker : Shumate.Marker {
         textview_comments.buffer.changed.connect (on_changed);
         delete_button.clicked.connect (delete_marker);
         popover.show.connect (on_show);
+        entry_name.activate.connect (popover.popdown);
     }
 
     public void delete_marker () {
