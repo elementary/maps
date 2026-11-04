@@ -83,7 +83,7 @@ public class Maps.Marker : Shumate.Marker {
 
         var frame_comments = new Gtk.Frame (null) {
             child = scrolled_comments,
-            height_request = 50,
+            height_request = 70,
             hexpand = true,
             vexpand = true
         };
