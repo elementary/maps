@@ -17,6 +17,7 @@ public class Maps.SearchResultMarker : Shumate.Marker {
     public signal void create_pin (MarkerData markerdata);
 
     private Granite.HeaderLabel headerlabel;
+    private Gtk.Image icon;
     private Gtk.Popover popover;
 
     public string loc_name {
@@ -37,10 +38,22 @@ public class Maps.SearchResultMarker : Shumate.Marker {
         }
     }
 
+    public string loc_icon {
+        owned get {
+            return icon.icon_name.dup ();
+        }
+        set {
+            icon.icon_name = value;
+        }
+    }
+
     public SearchResultMarker (Geocode.Place place) {
         Object (
             latitude: place.location.latitude,
-            longitude: place.location.longitude
+            longitude: place.location.longitude,
+            loc_name: place.name ?? _("Unknown"),
+            loc_address: place.street_address ?? _("Unknown"),
+            loc_icon: place.icon.to_string () + "-symbolic"
         );
     }
 
@@ -53,11 +66,20 @@ public class Maps.SearchResultMarker : Shumate.Marker {
             width_request = 90
         };
 
+        var box_info = new Granite.Box (HORIZONTAL, NONE);
+
         headerlabel = new Granite.HeaderLabel ("");
         var button = new Gtk.Button.with_label (_("Create new pin"));
         button.add_css_class (Granite.CssClass.SUGGESTED);
 
-        box.append (headerlabel);
+        icon = new Gtk.Image () {
+            icon_size = LARGE
+        };
+
+        box_info.append (icon);
+        box_info.append (headerlabel);
+
+        box.append (box_info);
         box.append (button);
 
         popover = new Gtk.Popover () {
@@ -79,6 +101,7 @@ public class Maps.SearchResultMarker : Shumate.Marker {
         child = menubutton;
 
         button.clicked.connect (on_button_click);
+        show.connect (popup);
     }
 
     private void on_button_click () {
@@ -88,5 +111,9 @@ public class Maps.SearchResultMarker : Shumate.Marker {
             comments = loc_address
         };
         create_pin (new_marker_data);
+    }
+
+    public void popup () {
+        popover.popup ();
     }
 }
