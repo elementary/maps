@@ -69,7 +69,7 @@ public class Maps.SearchResultMarker : Shumate.Marker {
         var box_info = new Granite.Box (HORIZONTAL, NONE);
 
         headerlabel = new Granite.HeaderLabel ("");
-        var button = new Gtk.Button.with_label (_("Create new pin"));
+        var button = new Gtk.Button.with_label (_("Pin this location"));
         button.add_css_class (Granite.CssClass.SUGGESTED);
 
         icon = new Gtk.Image () {
@@ -101,7 +101,7 @@ public class Maps.SearchResultMarker : Shumate.Marker {
         child = menubutton;
 
         button.clicked.connect (on_button_click);
-        show.connect (popup);
+        show.connect (popover.popup);
     }
 
     private void on_button_click () {
@@ -111,9 +111,5 @@ public class Maps.SearchResultMarker : Shumate.Marker {
             comments = loc_address
         };
         create_pin (new_marker_data);
-    }
-
-    public void popup () {
-        popover.popup ();
     }
 }
