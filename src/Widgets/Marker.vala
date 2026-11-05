@@ -63,8 +63,12 @@ public class Maps.Marker : Shumate.Marker {
             show_emoji_icon = true
         };
 
+        var label_location = new Granite.HeaderLabel (_("Location name:")) {
+            mnemonic_widget = entry_name
+        };
+
         var box_name = new Granite.Box (VERTICAL, NONE);
-        box_name.append (new Granite.HeaderLabel (_("Location name")));
+        box_name.append (label_location);
         box_name.append (entry_name);
 
         textview_comments = new Granite.HyperTextView () {
@@ -88,8 +92,12 @@ public class Maps.Marker : Shumate.Marker {
             vexpand = true
         };
 
+        var label_comments = new Granite.HeaderLabel (_("Comments:")) {
+            mnemonic_widget = textview_comments
+        };
+
         var box_comments = new Granite.Box (VERTICAL, NONE);
-        box_comments.append (new Granite.HeaderLabel (_("Comments")));
+        box_comments.append (label_comments);
         box_comments.append (frame_comments);
 
         var delete_button = new Gtk.Button.from_icon_name ("user-trash-symbolic") {
