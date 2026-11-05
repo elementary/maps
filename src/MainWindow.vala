@@ -20,25 +20,42 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
 
     private const ActionEntry[] ACTION_ENTRIES = {
         { "search", on_search_activate },
+        { "pin", on_pin_activate },
     };
     private int current_busy_reason = 0;
     private ListStore location_store;
     private Cancellable? search_cancellable = null;
 
     private Gtk.Button current_location;
+    private Gtk.ToggleButton pin_location;
     private Gtk.Spinner spinner;
     private Gtk.SearchEntry search_entry;
     private Gtk.Popover search_res_popover;
     private MapWidget map_widget;
 
+    private Gtk.GestureClick gesture_click;
+    private Gtk.EventControllerKey key_controller;
+
     construct {
         title = _("Maps");
         add_action_entries (ACTION_ENTRIES, this);
+
+        gesture_click = new Gtk.GestureClick ();
+        key_controller = new Gtk.EventControllerKey ();
+        ((Gtk.Widget)this).add_controller (gesture_click);
+        ((Gtk.Widget)this).add_controller (key_controller);
 
         location_store = new ListStore (typeof (Geocode.Place));
 
         current_location = new Gtk.Button.from_icon_name ("find-location-symbolic") {
             tooltip_text = _("Move to the current location"),
+            valign = CENTER
+        };
+
+        pin_location = new Gtk.ToggleButton () {
+            tooltip_text = _("Pin a location"),
+            icon_name = "view-pin-symbolic",
+            action_name = "win.pin",
             valign = CENTER
         };
 
@@ -160,6 +177,7 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
             title_widget = search_clamp
         };
         headerbar.pack_start (current_location);
+        headerbar.pack_start (pin_location);
         headerbar.pack_end (menu_button);
         headerbar.pack_end (spinner);
 
@@ -239,7 +257,7 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
 
         search_listview.activate.connect ((pos) => {
             var place = (Geocode.Place) selection_model.get_item (pos);
-            map_widget.go_to_location (place.location);
+            map_widget.go_to_place (place);
             search_res_popover.popdown ();
         });
 
@@ -364,5 +382,45 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
 
         var search_result_item = (SearchResultItem) list_item.child;
         search_result_item.place = (Geocode.Place) list_item.item;
+    }
+
+    // We handle a pin mode at the level of the window, so we can disable the pin button,
+    // or cancel if the user press escape, or clicks anywhere but the map
+    private void on_pin_activate () {
+        pin_location.active = true;
+
+        set_cursor_from_name ("crosshair");
+        map_widget.set_cursor_from_name ("crosshair");
+
+        gesture_click.released.connect (on_click);
+        key_controller.key_released.connect (on_keypress);
+        map_widget.leaving_pin_mode.connect (on_exit_pin_mode);
+
+        map_widget.enter_pin_mode ();
+    }
+
+    private void on_exit_pin_mode () {
+        set_cursor_from_name ("default");
+        pin_location.active = false;
+
+        gesture_click.released.disconnect (on_click);
+        key_controller.key_released.disconnect (on_keypress);
+        map_widget.leaving_pin_mode.disconnect (on_exit_pin_mode);
+    }
+
+    // If this handler fires, then the user did not click on the map
+    private void on_click (int n_press, double x, double y) {
+        debug ("%.2f, %.2f", x, y);
+        map_widget.on_exit_pin_mode ();
+        on_exit_pin_mode ();
+        return;
+    }
+
+    // We only exit on Escape, as people may need to use other keys to navigate on the map from the keyboard
+    private void on_keypress (uint keyval, uint keycode, Gdk.ModifierType state) {
+        if (keyval == Gdk.Key.Escape) {
+            map_widget.on_exit_pin_mode ();
+            on_exit_pin_mode ();
+        }
     }
 }

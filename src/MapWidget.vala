@@ -19,13 +19,19 @@ public class Maps.MapWidget : Gtk.Box {
     private Shumate.SimpleMap map_widget;
     private Shumate.Map base_map;
     // Displays the "pin" icon at a specified place by search
-    private Shumate.MarkerLayer pin_layer;
+    private Shumate.MarkerLayer search_layer;
     // Displays the position of current location
     private Shumate.MarkerLayer location_layer;
-
+    // Displays the position of user-pinned layers
+    private Shumate.MarkerLayer user_layer;
     private GClue.Location? location = null;
+    private Gtk.GestureClick gesture_click;
+
+    private MarkerManager marker_manager;
 
     private bool is_watching_location = false;
+
+    public signal void leaving_pin_mode ();
 
     // The Royal Observatory
     private const double DEFAULT_LATITUDE = 51.2840;
@@ -40,16 +46,25 @@ public class Maps.MapWidget : Gtk.Box {
             hexpand = true
         };
 
+        gesture_click = new Gtk.GestureClick ();
+        map_widget.add_controller (gesture_click);
+
         append (map_widget);
         base_map = map_widget.map;
     }
 
     public void init_marker_layers () {
-        pin_layer = new Shumate.MarkerLayer (map_widget.viewport);
-        map_widget.add_overlay_layer (pin_layer);
+        search_layer = new Shumate.MarkerLayer (map_widget.viewport);
+        map_widget.add_overlay_layer (search_layer);
 
         location_layer = new Shumate.MarkerLayer (map_widget.viewport);
         map_widget.add_overlay_layer (location_layer);
+
+        user_layer = new Shumate.MarkerLayer (map_widget.viewport);
+        map_widget.add_overlay_layer (user_layer);
+
+        marker_manager = new MarkerManager (user_layer);
+        marker_manager.populate_layer.begin ();
     }
 
     // Set the initial location of the map widget.
@@ -146,13 +161,21 @@ public class Maps.MapWidget : Gtk.Box {
         // we get an uri that looks like geo:///lat,lon, remove slashes
         location.set_from_uri (uri.replace ("///", ""));
 
-        go_to_location (location);
+        var place = new Geocode.Place.with_location (_("Location"), Geocode.PlaceType.UNKNOWN, location);
+        go_to_place (place);
     }
 
-    public void go_to_location (Geocode.Location location) {
-        pin_layer.remove_all ();
-        mark_pin_at (location.latitude, location.longitude);
-        base_map.go_to_full (location.latitude, location.longitude, DEFAULT_ZOOM_LEVEL);
+    public void go_to_place (Geocode.Place place) {
+        search_layer.remove_all ();
+        var search_result_marker = new SearchResultMarker (place);
+
+        search_result_marker.create_pin.connect ((markerdata) => {
+            search_layer.remove_all ();
+            marker_manager.add_marker (markerdata);
+        });
+
+        search_layer.add_marker (search_result_marker);
+        base_map.go_to_full (place.location.latitude, place.location.longitude, DEFAULT_ZOOM_LEVEL);
     }
 
     // Saves the latest state of the map.
@@ -177,18 +200,24 @@ public class Maps.MapWidget : Gtk.Box {
         location_layer.add_marker (marker);
     }
 
-    private void mark_pin_at (double latitude, double longitude) {
-        var image = new Gtk.Image.from_icon_name ("pointer") {
-            icon_size = Gtk.IconSize.LARGE
-        };
+    public void enter_pin_mode () {
+        map_widget.map.set_cursor_from_name ("crosshair");
+        gesture_click.released.connect (on_click);
+    }
 
-        var marker = new Shumate.Marker () {
-            latitude = latitude,
-            longitude = longitude,
-            child = image,
-            selectable = true
-        };
+    public void on_exit_pin_mode () {
+        map_widget.map.set_cursor_from_name ("default");
+        gesture_click.released.disconnect (on_click);
+        leaving_pin_mode ();
+    }
 
-        pin_layer.add_marker (marker);
+    private void on_click (int n_press, double x, double y) {
+        on_exit_pin_mode ();
+
+        double latitude, longitude;
+        map_widget.viewport.widget_coords_to_location (map_widget, x, y, out latitude, out longitude);
+        marker_manager.add_marker (new MarkerData (latitude, longitude));
+
+        return;
     }
 }
