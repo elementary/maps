@@ -214,6 +214,8 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
                 // Intercept space key so it's not used for list activation: https://github.com/elementary/maps/issues/150
                 case Gdk.Key.KP_Space:
                 case Gdk.Key.space:
+                case Gdk.Key.BackSpace:
+                case Gdk.Key.Delete:
                     search_key_controller.forward (search_entry.get_delegate ());
                     return Gdk.EVENT_STOP;
                 default:
