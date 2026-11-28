@@ -108,3 +108,9 @@ search-result-item.land-feature image {
     background-color: @LIME_500;
     -gtk-icon-shadow: 0 1px 3px @LIME_700;
 }
+
+/* Avoid styling the button frame we use for custom locations */
+map-marker menubutton button.toggle {
+    background: none;
+    box-shadow: none;
+}

@@ -20,6 +20,8 @@ dependencies = [
     dependency('libadwaita-1'),
     dependency('libgeoclue-2.0'),
     dependency('shumate-1.0'),
+    # Required by Storage
+    dependency('json-glib-1.0'),
 ]
 
 sources = files(
@@ -29,6 +31,11 @@ sources = files(
     'MapWidget.vala',
     'SearchResultItem.vala',
     'Util.vala',
+    'Objects' / 'MarkerData.vala',
+    'Services' / 'MarkerManager.vala',
+    'Services' / 'Storage.vala',
+    'Widgets' / 'Marker.vala',
+    'Widgets' / 'SearchResultMarker.vala',
 )
 
 executable(
