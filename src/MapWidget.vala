@@ -175,8 +175,7 @@ public class Maps.MapWidget : Gtk.Box {
 
         var menubutton = new Gtk.MenuButton () {
             direction = Gtk.ArrowType.UP,
-            popover = popover,
-            opacity = 0.0
+            popover = popover
         };
 
         var marker = new Shumate.Point () {

@@ -7,6 +7,14 @@ map-point {
     min-width: 1.25rem;
     animation: zoom 5s linear infinite;
 }
+/* Make sure the inner shadow when the button activated is clipped by the marker */
+map-point button {
+    border-radius: 50%;
+}
+/* Remove the arrow icon in the menubutton of the marker */
+map-point arrow {
+    -gtk-icon-source: unset;
+}
 
 @keyframes zoom {
     0% {
