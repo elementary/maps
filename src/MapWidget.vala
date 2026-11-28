@@ -22,10 +22,16 @@ public class Maps.MapWidget : Gtk.Box {
     private Shumate.MarkerLayer pin_layer;
     // Displays the position of current location
     private Shumate.MarkerLayer location_layer;
-
+    // Displays the position of user-pinned layers
+    private Shumate.MarkerLayer user_layer;
     private GClue.Location? location = null;
+    private Gtk.GestureClick gesture_click;
+
+    private MarkerManager marker_manager;
 
     private bool is_watching_location = false;
+
+    public signal void leaving_pin_mode ();
 
     // The Royal Observatory
     private const double DEFAULT_LATITUDE = 51.2840;
@@ -40,6 +46,9 @@ public class Maps.MapWidget : Gtk.Box {
             hexpand = true
         };
 
+        gesture_click = new Gtk.GestureClick ();
+        map_widget.add_controller (gesture_click);
+
         append (map_widget);
         base_map = map_widget.map;
     }
@@ -50,6 +59,12 @@ public class Maps.MapWidget : Gtk.Box {
 
         location_layer = new Shumate.MarkerLayer (map_widget.viewport);
         map_widget.add_overlay_layer (location_layer);
+
+        user_layer = new Shumate.MarkerLayer (map_widget.viewport);
+        map_widget.add_overlay_layer (user_layer);
+
+        marker_manager = new MarkerManager (user_layer);
+        marker_manager.populate_layer.begin ();
     }
 
     // Set the initial location of the map widget.
@@ -190,5 +205,26 @@ public class Maps.MapWidget : Gtk.Box {
         };
 
         pin_layer.add_marker (marker);
+    }
+
+    public void enter_pin_mode () {
+        map_widget.map.set_cursor_from_name ("crosshair");
+        gesture_click.released.connect (on_click);
+    }
+
+    public void on_exit_pin_mode () {
+        map_widget.map.set_cursor_from_name ("default");
+        gesture_click.released.disconnect (on_click);
+        leaving_pin_mode ();
+    }
+
+    private void on_click (int n_press, double x, double y) {
+        on_exit_pin_mode ();
+
+        double latitude, longitude;
+        map_widget.viewport.widget_coords_to_location (map_widget, x, y, out latitude, out longitude);
+        marker_manager.add_marker (new MarkerData (latitude, longitude));
+
+        return;
     }
 }

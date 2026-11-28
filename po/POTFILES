@@ -1,4 +1,6 @@
 src/Application.vala
 src/MainWindow.vala
 src/MapWidget.vala
+src/Objects/MarkerData.vala
 src/SearchResultItem.vala
+src/Widgets/Marker.vala
