@@ -167,12 +167,6 @@ public class Maps.MapWidget : Gtk.Box {
     }
 
     private void mark_location_at (double latitude, double longitude) {
-        var marker = new Shumate.Point () {
-            latitude = latitude,
-            longitude = longitude,
-            selectable = true
-        };
-
         var label = new Granite.HeaderLabel (_("You are here"));
 
         var popover = new Gtk.Popover () {
@@ -180,12 +174,17 @@ public class Maps.MapWidget : Gtk.Box {
         };
 
         var menubutton = new Gtk.MenuButton () {
+            direction = Gtk.ArrowType.UP,
             popover = popover,
             opacity = 0.0
         };
 
-        popover.position = Gtk.PositionType.TOP;
-        marker.child = menubutton;
+        var marker = new Shumate.Point () {
+            child = menubutton,
+            latitude = latitude,
+            longitude = longitude,
+            selectable = true
+        };
 
         location_layer.add_marker (marker);
     }
